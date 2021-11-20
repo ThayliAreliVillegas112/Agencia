@@ -8,9 +8,12 @@
     <title>Listado</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
 </head>
+
 <body>
-     <!-- Tabla Marcas-->
+    <!-- Tabla Marcas-->
     <div class="text-center bg-info">
         <h3>
             Lista de Marcas
@@ -19,7 +22,8 @@
     <table id="tabla" class="text-center table table-striped">
     </table>
     <br>
-    <a href="create.html" class="btn btn-outline-primary" style="float: right; margin-right: 60px;" role="button">Registrar</a>
+    <a href="create.html" class="btn btn-outline-primary" style="float: right; margin-right: 60px;"
+        role="button">Registrar</a>
     <br>
     <br>
     <!-- Tabla Autos-->
@@ -32,8 +36,9 @@
     <table id="tabla2" class="text-center table table-striped">
     </table>
     <br>
-    <a href="create.html" class="btn btn-outline-primary" style="float: right; margin-right: 60px;" role="button">Registrar</a>
-    
+    <a href="create.html" class="btn btn-outline-primary" style="float: right; margin-right: 60px;"
+        role="button">Registrar</a>
+
     <!-- Modal detalles marca -->
     <div class="modal fade" id="details" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -51,7 +56,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 
     <!-- MODAL DELETE  Marca-->
     <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -71,9 +76,9 @@
                         <button type="submit" class="btn btn-danger">Eliminar</button>
                     </div>
                 </form>
-           </div>
+            </div>
         </div>
-    </div> 
+    </div>
 
     <!-- Modal update marca -->
     <div class="modal fade" id="update" tabindex="-1" aria-labelledby="update" aria-hidden="true">
@@ -99,7 +104,7 @@
     </div>
 
     <!-- ****************************************************************** OFFICE  *************************************************************************-->
-    
+
     <!-- Modal detalles Auto -->
     <div class="modal fade" id="details2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -129,7 +134,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 
     <!-- MODAL DELETE  auto-->
     <div class="modal fade" id="delete2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -141,7 +146,7 @@
                 </div>
                 <form action="javascript:void(0);" onsubmit="deleteAuto();">
                     <div class="modal-body">
-                        <input type="text" id="id2_delete">
+                        <input type="hidden" id="id2_delete">
                         <label>¿Desea eliminar el Auto?</label>
                     </div>
                     <div class="modal-footer">
@@ -149,9 +154,9 @@
                         <button type="submit" class="btn btn-danger">Eliminar</button>
                     </div>
                 </form>
-           </div>
+            </div>
         </div>
-    </div> 
+    </div>
 
     <!-- Modal update auto -->
     <div class="modal fade" id="update2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -167,9 +172,9 @@
                         <label>Nombre:</label>
                         <input type="text" class="form-control" id="nombre1_update">
                         <label>Matricula:</label>
-                        <input type="text" class="form-control" id="matricula_update" >
+                        <input type="text" class="form-control" id="matricula_update">
                         <label>Verificaión:</label>
-                        <input type="text" class="form-control" id="verificacion_update" >
+                        <input type="text" class="form-control" id="verificacion_update">
                         <label>Fecha Registro:</label>
                         <input type="datetime" class="form-control" id="fechaRegistro_update" disabled>
                         <label>Fecha Actualización:</label>
@@ -185,13 +190,13 @@
             </div>
         </div>
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    
+
     <script src="./controller/marcaController.js"></script> <!-- El controler debe ir primero para que lo lea -->
     <script src="./controller/autosController.js"></script>
     <script src="./main.js"></script>

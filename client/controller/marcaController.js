@@ -46,9 +46,9 @@ const getMarca = () => {
                 "<tr>" +
                 "<td>" + listMarca[i].id + "</td>" +
                 "<td>" + listMarca[i].Nombre + "</td>" +
-                "<td>"+ '<button onclick="getInfo('+ listMarca[i].id +');" type="button" class="btn btn-primary text-dark" data-bs-toggle="modal" data-bs-target="#details"> Detalles</button> </td>'+
-                "<td>"+ '<button onclick="getInfoUpdate('+ listMarca[i].id +');" type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#update"> Modificar</button> </td>'+
-                "<td>"+ '<button onclick="getId('+ listMarca[i].id +');" type="button" class="btn btn-danger text-dark" data-bs-toggle="modal" data-bs-target="#delete"> Eliminar</button> </td>'+
+                "<td>"+ '<button onclick="getInfo('+ listMarca[i].id +');" type="button" class="btn btn-primary text-dark" data-bs-toggle="modal" data-bs-target="#details"><i class="fa fa-align-left" aria-hidden="true"></i> Detalles</button> </td>'+
+                "<td>"+ '<button onclick="getInfoUpdate('+ listMarca[i].id +');" type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#update"><i class="fa fa-edit" aria-hidden="true"></i> Modificar</button> </td>'+
+                "<td>"+ '<button onclick="getId('+ listMarca[i].id +');" type="button" class="btn btn-danger text-dark" data-bs-toggle="modal" data-bs-target="#delete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button> </td>'+
                 "</tr>")
         }
     });

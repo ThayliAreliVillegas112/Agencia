@@ -92,13 +92,15 @@ const getAuto = () => {
                 "<td>" + dateUpdated + "</td>" +
                 "<td>" + listAutos[i].estado + "</td>" +
                 "<td>" + listAutos[i].marca + "</td>" +
-                "<td>" + '<button onclick="getInfoAuto(' + listAutos[i].id + ');" type="button" class="btn btn-primary text-dark" data-bs-toggle="modal" data-bs-target="#details2"> Detalles</button> </td>' +
-                "<td>" + '<button onclick="getInfoUpdateAuto(' + listAutos[i].id + ');" type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#update2"> Modificar</button> </td>' +
-                "<td>" + '<button onclick="getIdAuto(' + listAutos[i].id + ');" type="button" class="btn btn-danger text-dark" data-bs-toggle="modal" data-bs-target="#delete2"> Eliminar</button> </td>' +
+                "<td>" + '<button onclick="getInfoAuto(' + listAutos[i].id + ');" type="button" class="btn btn-primary text-dark" data-bs-toggle="modal" data-bs-target="#details2"> <i class="fa fa-align-left" aria-hidden="true"></i> Detalles</button> </td>' +
+                "<td>" + '<button onclick="getInfoUpdateAuto(' + listAutos[i].id + ');" type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#update2"><i class="fa fa-edit" aria-hidden="true"></i> Modificar</button> </td>' +
+                "<td>" + '<button onclick="getIdAuto(' + listAutos[i].id + ');" type="button" class="btn btn-danger text-dark" data-bs-toggle="modal" data-bs-target="#delete2"><i class="fa fa-chevron-down" aria-hidden="true"></i> Eliminar</button> </td>' +
                 "</tr>")
         }
     });
 };
+
+
 
 const registerAuto = async () => {
     let nombre = document.getElementById('nombre1_register').value;
@@ -150,7 +152,7 @@ const updateAuto = async () => {
 const deleteAuto = async () => {
     let id = document.getElementById("id2_delete").value;
     await $.ajax({
-        type: 'GET',
+        type: 'POST',
         url: 'http://localhost:4000/autos/delete/' + id
     }).done(res => {
         console.log(res);

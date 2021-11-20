@@ -55,7 +55,7 @@ router.post('/update/:id', async (req, res)=>{
 router.post ('/delete/:id', async (req, res) =>{
     const { id } = req.params;
 
-    await pool.query('DELETE autos WHERE id = ?', [id]);
+    await pool.query('UPDATE autos SET estado = 0 WHERE id = ?', [id]);
     res.json({
         status: 200,
         message: "Se ha eliminado correctamente"
