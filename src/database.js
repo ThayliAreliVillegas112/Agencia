@@ -2,7 +2,6 @@ const mysql = require('mysql');
 
 const { promisify } = require('util');  // para dar soporte y realizar promises
 const { database } = require('./keys.js');
-
 const pool = mysql.createPool(database);
 
 pool.getConnection((err, conn) =>{

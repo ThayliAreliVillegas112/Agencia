@@ -27,7 +27,7 @@ router.post('/create', async (req, res)=> {
     var dateCreated = new Date().toISOString();
     //var dateCreated2 = new Date().toLocaleString();
     const auto ={
-        nombre, matricula, verificacion, fechaRegistro: dateCreated , status:1, marca
+        nombre, matricula, verificacion, fechaRegistro: dateCreated , estado:1, marca
     };
 
     await pool.query('INSERT INTO autos set ?', [auto]);
